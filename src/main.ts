@@ -23,4 +23,8 @@ async function bootstrap() {
   await app.listen(port);
   console.log(`Application is running on: ${await app.getUrl()}`);
 }
+
+const mongodbUri = process.env.MONGODB_URI;
+console.log(mongodbUri);
+
 void bootstrap();
